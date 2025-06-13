@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🛡️ Benchmarking Misuse Mitigation Against Covert Adversaries</title>
+    <style>
+        :root {
+            --primary-color: #191970;
+            --accent-color: #4169e1;
+            --highlight-color: #fff3b0;
+            --light-bg: #f9f9f9;
+            --border-color: #e0e0e0;
+        }
+        
+        body {
+            font-family: 'Lora', serif;
+            line-height: 1.6;
+            color: #222;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        
+        .mono-font {
+            font-family: 'IBM Plex Mono', monospace;
+            font-weight: 400;
+            font-size: 1rem;
+        }
+        
+        h1 {
+            font-size: 1.8em;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 0.2em;
+            color: #1a1a1a;
+            line-height: 1.5;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .highlight {
+            background-color: var(--highlight-color);
+            padding: 0.2rem 0.5rem;
+            border-radius: 2px;
+            font-weight: 700;
+        }
+        
+        h1 .highlight {
+            font-size: inherit;
+        }
+        
+        .authors {
+            text-align: center;
+            margin-bottom: 0.8em;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 1.02rem;
+            font-weight: 400;
+            color: #222;
+        }
+        
+        .authors a {
+            color: #222;
+            text-decoration: none;
+            font-weight: 400;
+        }
+        
+        .authors a:hover {
+            text-decoration: underline;
+        }
+        
+        .authors sup {
+            font-size: 0.7em;
+        }
+        
+        .affiliation {
+            text-align: center;
+            margin-bottom: 2em;
+            font-style: italic;
+            color: #666;
+            font-size: 1.1em;
+        }
+        
+        .links {
+            text-align: center;
+            margin: 2em 0;
+        }
+        
+        .links {
+            text-align: center;
+            margin: 2em 0;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 1.1rem;
+            color: #222;
+        }
+        
+        .links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 5px;
+        }
+        
+        .links a:hover {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .affiliation {
+            text-align: center;
+            margin-bottom: 2em;
+            font-style: italic;
+            color: #666;
+            font-size: 1.1em;
+        }
+        
+        .content-wrapper {
+            display: flex;
+            gap: 2em;
+            align-items: flex-start;
+            margin: 2em 0;
+        }
+        
+        .abstract {
+            flex: 1.5;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #222;
+            font-weight: 400;
+            text-align: left;
+        }
+        
+        .abstract h2 {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            margin-top: 0;
+            color: #333;
+            font-size: 1.5em;
+            margin-bottom: 1em;
+        }
+        
+        .image-container {
+            flex: 1.2;
+            text-align: center;
+            margin-top: 3em;
+        }
+        
+        .image-placeholder {
+            background-color: #f0f0f0;
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            padding: 4em 2em;
+            color: #666;
+            font-family: 'IBM Plex Mono', monospace;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .image-caption {
+            margin-top: 1em;
+            font-size: 1.1em;
+            color: #666;
+            line-height: 1.4;
+            text-align: left;
+            font-style: italic;
+        }
+        
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+            }
+            
+            .abstract {
+                flex: 1;
+            }
+            
+            .image-container {
+                flex: 1;
+                margin-top: 2em;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .links a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1><span class="highlight mono-font">Benchmarking Misuse Mitigation<br>Against Covert Adversaries</span></h1>
+    
+    <div class="authors">
+        <a href="https://davisrbrown.com" target="_blank">Davis Brown</a><sup>⋆1</sup>, 
+        <a href="https://www.linkedin.com/in/mahdi-sabbaghi/" target="_blank">Mahdi Sabbaghi</a><sup>⋆1</sup>, 
+        <a href="https://www.linkedin.com/in/luze-sun-45624a1b7/" target="_blank">Luze Sun</a><sup>1</sup>, 
+        <a href="https://arobey1.github.io/" target="_blank">Alexander Robey</a><sup>2</sup>,<br>
+        <a href="https://www.seas.upenn.edu/~pappasg/" target="_blank">George J. Pappas</a><sup>1</sup>, 
+        <a href="https://riceric22.github.io/" target="_blank">Eric Wong</a><sup>1</sup>, 
+        <a href="https://www.seas.upenn.edu/~hassani/" target="_blank">Hamed Hassani</a><sup>1</sup>
+    </div>
+    
+    <div class="affiliation">
+        <sup>1</sup><em>University of Pennsylvania</em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup>2</sup><em>Carnegie Mellon University</em>
+    </div>
+    
+    <div class="links">
+        <a href="https://www.arxiv.org/abs/2506.06414" target="_blank">Read Paper</a> |
+        <a href="https://github.com/davisrbr/bsd-misuse" target="_blank">View Code</a> |
+        <a href="https://huggingface.co/datasets/BrachioLab/BSD" target="_blank">Dataset</a>
+    </div>
+    
+    <div class="content-wrapper">
+        <div class="abstract">
+            <p class="mono-font">
+                Existing language model safety evaluations focus on <strong>overt attacks and low-stakes tasks.</strong> Realistic attackers can subvert current safeguards by requesting help on small, benign-seeming tasks across many independent queries. Because individual queries do not appear harmful, the attack is hard to detect. However, when combined, these fragments uplift misuse by helping the attacker complete hard and dangerous tasks. Toward identifying defenses against such strategies, we develop Benchmarks for Stateful Defenses (BSD), <strong>a data generation pipeline that automates evaluations of covert attacks and corresponding defenses</strong>. Using this pipeline, we curate two new datasets that are consistently refused by frontier models and are too difficult for weaker open-weight models. Our evaluations indicate that decomposition attacks are effective misuse enablers, and highlight stateful defenses as a countermeasure.
+            </p>
+            <p style="text-align: center; font-size: 0.9em; margin-top: 1em; color: #666;">
+                <sup>⋆</sup>Equal contribution.
+            </p>
+        </div>
+        <div class="image-container">
+            <img src="plot-wmdpr-decompQwen2.5-7B-bar.png" alt="Decomposition attack effectiveness">
+            <p class="image-caption">
+                Strong, safe models uplift weaker models on misuse questions. While the "weak" attacker model (Qwen 2.5) is near random guessing and strong models refuse most questions, decomposition attacks lift performance by 35%. Decomposition attacks are both <strong>as effective as the strongest jailbreaks</strong> and <strong>much harder for the defender to detect</strong>.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
