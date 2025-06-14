@@ -131,7 +131,7 @@
         }
         
         .abstract {
-            flex: 1.5;
+            flex: 1.6;
             font-family: 'IBM Plex Mono', monospace;
             font-size: 1.1rem;
             line-height: 1.7;
@@ -149,9 +149,9 @@
         }
         
         .image-container {
-            flex: 1.2;
+            flex: 1.1;
             text-align: center;
-            margin-top: 4em;
+            margin-top: 3em;
         }
         
         .image-placeholder {
@@ -172,7 +172,7 @@
         
         .image-caption {
             margin-top: 1em;
-            font-size: 1.1em;
+            font-size: 1.05em;
             color: #666;
             line-height: 1.4;
             text-align: left;
@@ -210,9 +210,13 @@
                 font-size: 2em;
             }
             
+            .links {
+                font-size: 1rem;
+            }
+            
             .links a {
-                display: block;
-                margin: 10px 0;
+                display: inline-block;
+                margin: 5px 3px;
             }
         }
     </style>
@@ -243,7 +247,7 @@
     <div class="content-wrapper">
         <div class="abstract">
             <p class="mono-font">
-                Existing language model safety evaluations focus on <strong>overt attacks and low-stakes tasks.</strong> Realistic attackers can subvert current safeguards by requesting help on small, benign-seeming tasks across many independent queries. Because individual queries do not appear harmful, the attack is hard to detect. However, when combined, these fragments uplift misuse by helping the attacker complete hard and dangerous tasks. Toward identifying defenses against such strategies, we develop Benchmarks for Stateful Defenses (BSD), <strong>a data generation pipeline that automates evaluations of covert attacks and corresponding defenses</strong>. Using this pipeline, we curate two new datasets that are consistently refused by frontier models and are too difficult for weaker open-weight models. Our evaluations indicate that decomposition attacks are effective misuse enablers, and highlight stateful defenses as a countermeasure.
+                Existing language model safety evaluations focus on <strong>overt attacks</strong> and <strong>low-stakes tasks</strong>. Realistic attackers can subvert current safeguards by requesting help on small, benign-seeming tasks across many independent queries. Because individual queries do not appear harmful, the attack is hard to detect. However, when combined, these fragments uplift misuse by helping the attacker complete hard and dangerous tasks. Toward identifying defenses against such strategies, we develop Benchmarks for Stateful Defenses (BSD), a data generation pipeline that automates evaluations of covert attacks and corresponding defenses. Using this pipeline, we curate two new datasets that are consistently refused by frontier models and are too difficult for weaker open-weight models. Our evaluations indicate that <strong>decomposition attacks are effective misuse enablers</strong>, and highlight <strong>stateful defenses</strong> as a countermeasure.
             </p>
             <p style="text-align: center; font-size: 0.9em; margin-top: 1em; color: #666;">
                 <sup>⋆</sup>Equal contribution.
@@ -252,7 +256,7 @@
         <div class="image-container">
             <img src="plot-wmdpr-decompQwen2.5-7B-bar.png" alt="Decomposition attack effectiveness">
             <p class="image-caption">
-                Strong, safe models uplift weaker models on misuse questions. While the "weak" attacker model (Qwen 2.5) is near random guessing and strong models refuse most questions, decomposition attacks lift performance by 35%. Decomposition attacks are both <strong>as effective as the strongest jailbreaks</strong> and <strong>much harder for the defender to detect</strong>.
+                Strong, safe models uplift weaker models on biological misuse questions. While the "weak" attacker model (Qwen 2.5) is near random guessing and strong models refuse most questions, decomposition attacks lift performance by 35%. Decomposition attacks are both <strong>as effective as the strongest jailbreaks</strong> and <strong>much harder for the defender to detect</strong>.
             </p>
         </div>
     </div>
